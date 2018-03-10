@@ -1,0 +1,10 @@
+Here is a simple technique on how to generate multiple copies of a document from a given template. Say, for example, you need to make invoices for 100 different people. You have a template which consists of two main parts:
+
+1) Fixed text blocks (FTB)
+2) Variable text fields (VTF)
+
+The premise of this technique is to create an Excel Input Table (EIT), containing filler for each variable text field. One row = one invoice. All the info for a given invoice copy is contained in Excel sheet columns. The main idea is to write formulas that will format/reshape/transform vanilla input values according to your needs. You can have as many columns as you need. It won't affect performance all that much. Don't be shy. For example you can make a formula that will convert numeric values into written form like this: *from 100 000,00 to (сто тысяч) рублей 00 копеек*
+
+When your EIT is complete you are ready to prepare your Word template. All you need to do here is to place mail merge fields for the VTF corresponding to columns previously made in EIT. Highlighting variable text fields in colour is considered good practice. I use yellow myself. 
+
+After having matched Word and Excel together just use the VBA script to run the merge. You're welcome :)
