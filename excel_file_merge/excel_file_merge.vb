@@ -7,10 +7,10 @@ Sub MergeFiles()
      
     Application.EnableEvents = False
     Application.ScreenUpdating = False
-    Path = ThisWorkbook.Path & "\ñåíòÿáðü 2016" 'file path subject to change
+     Path = ThisWorkbook.Path & "\September_2016" 'file path subject to change
     FileName = Dir(Path & "\*.xls", vbNormal)
     Do Until FileName = ""
-        Set Wkb = Workbooks.Open(FileName:=Path & "\" & FileName, Password:="100")
+          Set Wkb = Workbooks.Open(FileName:=Path & "\" & FileName, Password:="100") 'Excel file password
         For Each WS In Wkb.Worksheets
             WS.Unprotect Password:="139"
             
